@@ -1,10 +1,12 @@
-import { Get, Controller } from '@nestjs/common';
+import { Post, Controller } from '@nestjs/common';
+import { SensorDataEntity } from './sensor-data.entity';
 
-@Controller()
+@Controller('sensor-data')
 export class SensorDataController {
   constructor() {}
 
-  @Get()
-  root(): string {
+  @Post()
+  post(data: SensorDataEntity): void {
+
   }
 }
